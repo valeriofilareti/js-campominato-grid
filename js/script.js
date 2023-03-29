@@ -11,11 +11,15 @@ const genBtn = document.querySelector('button')
 
 genBtn.addEventListener('click', function(){
   for (i = 0; i < 100; i++) {
-    const newBox = createBox()
-    container.append(newBox)
+    const newBox = createBox();
+    container.append(newBox);
+    newBox.addEventListener('click', function () {
+      this.classList.toggle('blue')
+    })
   }
-  genBtn.classList.add('hide')
 })
+
+
 
 // const box = document.getElementsByClassName('box')
 

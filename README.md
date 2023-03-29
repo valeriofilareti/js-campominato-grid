@@ -6,3 +6,8 @@ L’utente clicca su un bottone che genererà una griglia di gioco quadrata.
 Ogni cella ha un numero progressivo, da 1 a 100.
 Ci saranno quindi 10 caselle per ognuna delle 10 righe.
 Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
+
+## Svolgimento 
+1) creo una funzione che generi un nuovo box e gli attribuisca la classe 'box'
+2) attraverso un ciclo for stampo nel container 100 box
+3) al click sul singolo box, viene colorato di blu
