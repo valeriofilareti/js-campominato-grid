@@ -13,18 +13,23 @@ genBtn.addEventListener('click', function(){
   for (i = 0; i < 100; i++) {
     const newBox = createBox();
     container.append(newBox);
+    this.boxId = i;
+    console.log(this.boxId);
+    
     newBox.addEventListener('click', function () {
       this.classList.toggle('blue')
+      console.log(this.boxId);
     })
   }
 })
 
 
 
+
 // const box = document.getElementsByClassName('box')
 
 
-console.log(newBox);
+
 
 //--------------------------------------------------------
 

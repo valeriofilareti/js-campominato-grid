@@ -11,3 +11,4 @@ Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro e
 1) creo una funzione che generi un nuovo box e gli attribuisca la classe 'box'
 2) attraverso un ciclo for stampo nel container 100 box
 3) al click sul singolo box, viene colorato di blu
+4) creo una proprietà custom per i box che li numeri da 1 a 100
