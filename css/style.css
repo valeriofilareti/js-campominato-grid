@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: cornflowerblue;
+  
+}
+.container {
+  width: 600px;
+  height: 600px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box {
+  width: 60px;
+  height: 60px;
+  border: 1px solid black;
+}
+.hide {
+  display: none;
+}
