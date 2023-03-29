@@ -7,34 +7,60 @@ ed emetto un messaggio in console con il numero della cella cliccata.
 */
 
 const container = document.querySelector('.container');
-const genBtn = document.querySelector('button')
+const genBtn = document.querySelector('.gen-btn')
+
+
+
+
 
 genBtn.addEventListener('click', function(){
-  for (i = 0; i < 100; i++) {
-    const newBox = createBox();
+
+
+  const difficult = document.querySelector('select')
+  
+  let nBox;
+  
+  if (difficult.value === 'hard'){
+    nBox = 100;
+  } else if (difficult.value === 'medium') {
+    nBox = 81
+  } else if (difficult.value === 'easy') {
+    nBox = 49;
+  }
+
+  for (i = 0; i < nBox; i++) {
+    let newBox;
+    if (nBox == 100) {
+      newBox = createBox('hard-box');
+    } else if (nBox == 81) {
+      newBox = createBox('medium-box');
+    } else if (nBox == 49) {
+      newBox = createBox('easy-box')
+    }
     container.append(newBox);
-    this.boxId = i;
-    console.log(this.boxId);
+    newBox.boxId = i;
+    console.log(newBox.boxId);
     
     newBox.addEventListener('click', function () {
       this.classList.toggle('blue')
       console.log(this.boxId);
     })
   }
+
+  genBtn.classList.add('hide')
+
 })
 
 
 
-
-// const box = document.getElementsByClassName('box')
 
 
 
 
 //--------------------------------------------------------
 
-function createBox () {
+function createBox (difficultBox) {
   const box = document.createElement('div');
-  box.classList.add('box');
+  box.classList.add(difficultBox);
   return box;
 }
